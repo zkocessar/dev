@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 @JsonInclude(Include.NON_NULL)
 public class Cliente {
 	
-	@ApiModelProperty(notes = "Identificador unico, autogenerado por el Sistema", required = false)
+	@ApiModelProperty(notes = "Identificador unico, autogenerado por el Sistema", required = false, hidden = true)
 	private Integer c_id;
 	@ApiModelProperty(notes = "Nombre del Cliente")
 	private String c_nombre;
@@ -20,9 +20,9 @@ public class Cliente {
 	private String c_apellido;
 	@ApiModelProperty(notes = "Edad del Cliente")
 	private Integer c_edad;
-	@ApiModelProperty(notes = "Fecha de Nacimiento del Cliente") 
+	@ApiModelProperty(notes = "Fecha de Nacimiento del Cliente", example = "1994-01-01") 
 	private Date c_fec_nav;
-	@ApiModelProperty(notes = "Fecha de Muerte del Cliente" , required = false)
+	@ApiModelProperty(notes = "Fecha de Muerte del Cliente" , required = false, hidden = true)
 	private Date c_fec_muerte;
 
 	public Cliente() {
