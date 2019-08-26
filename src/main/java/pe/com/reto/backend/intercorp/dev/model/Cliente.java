@@ -5,12 +5,14 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+@ApiModel(description = "Detalles del Cliente")
 @JsonInclude(Include.NON_NULL)
 public class Cliente {
 	
-	@ApiModelProperty(notes = "Identificador unico, autogenerado por el Sistema")
+	@ApiModelProperty(notes = "Identificador unico, autogenerado por el Sistema", required = false)
 	private Integer c_id;
 	@ApiModelProperty(notes = "Nombre del Cliente")
 	private String c_nombre;
@@ -20,7 +22,7 @@ public class Cliente {
 	private Integer c_edad;
 	@ApiModelProperty(notes = "Fecha de Nacimiento del Cliente") 
 	private Date c_fec_nav;
-	@ApiModelProperty(notes = "Fecha de Muerte del Cliente")
+	@ApiModelProperty(notes = "Fecha de Muerte del Cliente" , required = false)
 	private Date c_fec_muerte;
 
 	public Cliente() {

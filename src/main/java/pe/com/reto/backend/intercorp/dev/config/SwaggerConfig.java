@@ -1,6 +1,10 @@
 package pe.com.reto.backend.intercorp.dev.config;
 
+import java.util.Collections;
+
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -29,11 +33,9 @@ public class SwaggerConfig {
 				"1.0",
 				"Terms of Service",
 				new Contact("Cesar Flores Dev", "https://www.linkedin.com/in/cesar-michel-flores-espinoza-58aa3474/", "owcessar@gmail.com"),
-				"Apache License Version 2.0", "https://www.apache.org/license.html", null
+				"Apache License Version 2.0", "https://www.apache.org/license.html", Collections.emptyList()
 				);
 		return apiInfo;
 	}
-
-	
 	
 }
